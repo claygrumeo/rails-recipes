@@ -1,0 +1,9 @@
+<div id="<%= dom_id recipe %>" class="table">
+  <tr>
+    <th scope="row"><%= recipe.title %></th>
+    <td><%= recipe.author_first + " " + recipe.author_last %></td>
+    <td><%= recipe.instructions %></td>
+    <td><%= recipe.public %></td>
+    <td><%= link_to "View recipe", recipe %></td>
+  </tr>
+</div>
