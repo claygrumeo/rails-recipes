@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numerator: 1
+  denominator: 1
+  whole: 1
+  unit: MyString
+  item: MyString
+
+two:
+  numerator: 1
+  denominator: 1
+  whole: 1
+  unit: MyString
+  item: MyString

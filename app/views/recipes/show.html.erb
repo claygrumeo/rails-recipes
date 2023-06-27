@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render 'recipedisplay', recipe: @recipe %>
+<%= render 'recipedisplay', recipe: @recipe, ingredients: @ingredients %>
 
 <div>
   <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |

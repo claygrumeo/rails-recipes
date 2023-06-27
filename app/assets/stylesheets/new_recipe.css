@@ -1,0 +1,3 @@
+[id^="gridRadios"][id$="Inputs"] input {
+  width: 45px;
+}
