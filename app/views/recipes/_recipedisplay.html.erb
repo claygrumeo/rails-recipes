@@ -1,24 +1,33 @@
 <div id="<%= dom_id recipe %>" class="table">
-  <p>
-    <strong>Title:</strong>
-    <%= recipe.title %>
-  </p>
+  <header class="d-flex flex-row align-items-center">
+    <h1>
+      <%= recipe.title %>
+    </h1>
+    <span>
+       &nbsp; By <%= recipe.author_first + " " + recipe.author_last %>
+    </span>
+  </header>
+
+  <h2>Ingredients</h2>
+
+  <% ingredients.each do |ingredient| %>
+    <% if ingredient.numerator.present? %>
+      <p>
+        <sup><%= ingredient.numerator %></sup>&frasl;<sub><%= ingredient.denominator %></sub>
+        <%= ingredient.unit %>
+        <%= ingredient.item %>
+      </p>
+    <% end %>
+    <% if ingredient.whole.present? %>
+      <p>
+        <%= ingredient.whole %>
+        <%= ingredient.unit %>
+        <%= ingredient.item %>
+      </p>
+    <% end %>
+  <% end %>
 
   <p>
-    <strong>Author:</strong>
-    <%= recipe.author_first + recipe.author_last %>
-  </p>
-
-  <p>
-    <strong>Instructions:</strong>
     <%= recipe.instructions %>
   </p>
-
-  <p>
-    <strong>Public:</strong>
-    <%= recipe.public %>
-  </p>
-  <% ingredients.each do |ingredient| %>
-    <p><%= ingredient.inspect %></p>
-  <% end %>
 </div>
